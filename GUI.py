@@ -19,6 +19,9 @@ def download_video():
         'outtmpl': output_path,  # Output file name
         'format': 'best',        # Select the best video format
         'progress_hooks': [progress_hook],  # Add progress hook
+        'socket_timeout': 50,  # Set timeout to handle large downloads
+        'continuedl': True,
+        'merge_output_format': 'mp4',
     }
 
     try:
